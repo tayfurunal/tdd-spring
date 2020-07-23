@@ -1,5 +1,7 @@
 package com.tayfurunal.tddspring.error;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.Date;
 import java.util.Map;
 
@@ -8,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiError {
 
     private Long timestamp = new Date().getTime();
